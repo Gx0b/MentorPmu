@@ -1,19 +1,15 @@
-public class Event {
-    private int eventId;
-    private String title;
-    private String description;
-    private String date;
-    private String time;
-    private int mentorId;
+public class EventService {
 
-    public Event(int eventId, String title, String description, String date, String time, int mentorId) {
-        this.eventId = eventId;
-        this.title = title;
-        this.description = description;
-        this.date = date;
-        this.time = time;
-        this.mentorId = mentorId;
+    // Method for mentor to create a new event
+    public Event createEvent(int eventId, String title, String description, 
+                             String date, String time, int mentorId) {
+
+        // Creating the event object
+        Event newEvent = new Event(eventId, title, description, date, time, mentorId);
+
+        // (Later: save to database or list)
+        System.out.println("Event created successfully: " + newEvent.getTitle());
+
+        return newEvent;
     }
-
-    // Getters & Setters
 }
