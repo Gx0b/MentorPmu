@@ -2,7 +2,6 @@ package com.pmumentor.model.entities;
 
 public class Student {
     
-    // الخصائص (Attributes) - تم تجميعها في مكان واحد
     private String studentID;
     private String name;
     private String email; 
@@ -10,7 +9,6 @@ public class Student {
     private String major;
     private String role; // 'Mentee' or 'Mentor'
 
-    // البنّاء (Constructor)
     public Student(String studentID, String name, String email, String passwordHash, String major, String role) {
         this.studentID = studentID;
         this.name = name;
@@ -20,7 +18,6 @@ public class Student {
         this.role = role;
     }
     
-    // دوال الوصول (Getters and Setters) الكاملة 
     
     public String getStudentID() {
         return studentID;
@@ -54,7 +51,6 @@ public class Student {
         this.passwordHash = passwordHash;
     }
 
-    // الدالة المفقودة التي تسببت في الخطأ السابق (getMajor())
     public String getMajor() {
         return major;
     }
@@ -70,4 +66,5 @@ public class Student {
     public void setRole(String role) {
         this.role = role;
     }
+
 }
